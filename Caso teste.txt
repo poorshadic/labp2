@@ -1,0 +1,25 @@
+Compilação: 
+gcc -Wall -c bibp2.c
+ar -rc libbibp2.a bibp2.o
+ar -t libbibp2.a
+gcc -Wall -o main main.c -L. -lbibp2 `pkg-config --libs --cflags gtk+-3.0`
+
+Execução: ./main
+
+No nosso programa o ficheiro lusiadas é chamado de in.txt
+
+Caso Teste:
+(clicar)
+3
+(esperar)
+333
+*
+(clicar) Modo Inteligente
+0
+5626
+*
+0
+33
+****
+###########
+(fim do caso teste)
